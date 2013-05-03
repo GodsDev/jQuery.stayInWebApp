@@ -14,7 +14,8 @@
 					selector = 'a';
 				}
 				//bind to the click event of all specified elements
-				$("body").delegate(selector,"click",function(event) {
+				//$("body").delegate(selector,"click",function(event) {
+				$("body").on("click",selector,function(event) {//As of jQuery 1.7, .delegate() has been superseded by the .on() method.				
 					//TODO: execute all other events if this element has more bound events
 					/* NEEDS TESTING
 					for(i = 0; i < $(this).data('events'); i++) {
